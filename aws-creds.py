@@ -41,7 +41,7 @@ class KeepPassService(object):
             "--show-protected", 
             self.dbpath, 
             entry_name
-        ])
+        ], encoding="utf8")
         values=output.splitlines()
         if len(values) < 2:
             print("Entry {} does not contain at least a UserName and Password".format(entry_name))
