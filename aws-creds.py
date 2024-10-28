@@ -10,7 +10,7 @@ bash_init_file = "/tmp/.init-file"
 
 def create_init_file(entry_name):
     f = open(bash_init_file, "w")
-    f.write("PS1='\[\e[41m\]({})\[\e[0m\] \w$ '".format(entry_name))
+    f.write(r"PS1='\[\e[41m\]({})\[\e[0m\] \w$ '".format(entry_name))
     f.close()
 
 class KeePassEntry(object):
